@@ -56,4 +56,13 @@ class UsersEditTest < ActionDispatch::IntegrationTest
 
 
   end
+
+
+  test "no friendly forwarding for multiple attempts" do
+    get edit_user_path @user
+    get edit_user_path @user
+    log_in_as(@user)
+    assert_redirected_to user_path(@user)
+
+  end
 end
