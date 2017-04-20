@@ -17,3 +17,6 @@
 # Ignore user specific IDEA files
 **/.idea/workspace.xml
 **/.idea/tasks.xml
+
+# Ignore uploaded test images.
+/public/uploads

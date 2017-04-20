@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   resources :account_activation,only: [:edit]
   resources :password_reset,    only: [:new,:create,:edit,:update]
   post    'password_resets' => 'password_reset#create'
+  resources :microposts, only: [:create,:destroy]
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
